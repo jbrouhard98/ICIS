@@ -29,7 +29,7 @@ session_start();
 if (isset ($_SESSION['HTTP_USER_AGENT'])){
 	{
 		if($_SESSION['HTTP_USER_AGENT'] != md5($_SERVER['HTTP_USER_AGENT'])){
-			header('location:./login.php');
+			header('location:'. dirname(dirname(__FILE__)) . '/login.php');
 		}
 	}
 }
@@ -40,7 +40,7 @@ else
 	
 // Now lets check to see if the sesison username exists...
 if(!isset($_SESSION['uname'])){
-	header('location:./login.php');
+	header('location:'. dirname(dirname(__FILE__)) . '/login.php');
 }
 else{
 	
