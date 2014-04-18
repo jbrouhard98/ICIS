@@ -22,9 +22,9 @@
  */
  
 $host = "localhost"; // Database Host
-$db_user = "proxmemdb"; // Database username
-$db_pass = "seme2uhaq"; // Database password
-$database = "jbrouhard_proxmemdb"; // Database name
+$db_user = "username"; // Database username
+$db_pass = "password"; // Database password
+$database = "database"; // Database name
 
 $theme = dirname(dirname(__FILE__)) .'/theme/default/'; // Which theme are you using
 
