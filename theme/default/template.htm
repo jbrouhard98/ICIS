@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{siteinfo}</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <link href="../assets/css/stylesheet.css" rel="stylesheet">
+        <link href="../assets/css/bootstrap-min.css" rel="stylesheet">
+        <link href="../assets/css/tablecloth.css" rel="stylesheet">
+        <link href="../theme/default/stylesheet.css" rel="stylesheet">
+        
+        <script>
+			$(function() {
+				$( "#accordion" ).accordion({
+					collapsible: true
+				});
+			});
+		</script>
+</head>
+
+<body>
+<div id=sidebar>
+<div id="accordion">
+{sidebar}
+</div>
+</div>
+<div id=container>
+<div id=header><p>{title}</p></div>
+<div id=content>
+	<p>{content}</p>
+</div></div><!--
+<div id=footer>
+    <div id="container>"
+	<div class=nav-bottom>
+   	 <ul class="nav-bottom">
+       	<li><a href=#>Home</a></li>
+        <li><a href=#>About Us</a></li>
+        <li><a href=#>Comms</a></li>
+        <li><a href=#>Events</a></li>
+        <li><a href=#>Links</a></li>
+      </ul>
+    </div>
+    <div id=footer-bottom><div id=container><p><center><div id=copyright>Star Trek, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager, and Star Trek: Enterprise</br>
+                        are © 1966-Present Paramount Television (a subsidiary of CBS Studios, Inc.) or Paramount Studios (a Viacom company).<br>
+                            Any use of copyrighted material is intended under the fair use doctrine, no infringement is intended.</div></center></p></div></div>
+</div>
+-->
+</body>
+</html>
