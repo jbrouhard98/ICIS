@@ -50,7 +50,15 @@ $count = mysqli_num_rows($result);
 // If result matched username and password, table row must be *ONE* row only
 if($count==1){
 	session_start();
+	// We need to create a unique token for this session
+	$bits = '8';
+	$token = bin2hex(openssl_random_pseudo_bytes($bits));
+	// Now we need to insert this token into the table.
+	$tokenSQL = "UPDATE member SET token='$token' WHERE username='$uname'";
+	$tokenR = mysqli_query($link,$tokenSQL);
+		
 	$_SESSION['uname'] = $uname;
+	$_SESSION['token'] = $token;
 	
 	header("Location:/main");
 	}
@@ -67,8 +75,7 @@ else{
   <link rel="stylesheet" href="/assets/css/login.css">
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body><center></center><h1 class=login>Unauthorized Access<br><br>Wrong Username or Password
-<br><br>Values Submitted: '. $_POST['username'] .'<br><br>' . $_POST['password'] .'</h1></center></body></html>';
+<body><center></center><h1 class=login>Unauthorized Access<br><br>Wrong Username or Password</h1></center></body></html>';
 	header('Refresh:5; url=/index.php');
 }
 
