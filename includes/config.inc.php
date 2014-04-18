@@ -22,9 +22,13 @@
  */
  
 $host = "localhost"; // Database Host
-$db_user = "username"; // Database username
-$db_pass = "password"; // Database password
-$database = "database"; // Database name
+$db_user = "proxmemdb"; // Database username
+$db_pass = "seme2uhaq"; // Database password
+$database = "jbrouhard_proxmemdb"; // Database name
+
+$theme = dirname(dirname(__FILE__)) .'/theme/default/'; // Which theme are you using
+
+// DO NOT EDIT BELOW THIS LINE! //
 
 $link = mysqli_connect($host, $db_user, $db_pass, $database); // Create the link to the database
  

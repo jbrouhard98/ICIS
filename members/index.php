@@ -17,10 +17,26 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-include("../includes/config.inc.php");
-include("../includes/session.inc.php");
-include("../includes/header.php");
+//include './includes/session.inc.php'; // Include session header files
 
-echo "<h1>DOC ROOT WORKS!</h1>";
+require dirname(dirname(__FILE__)) .'/includes/config.inc.php'; // Lets include the configuration file for this.
 
-include("../includes/footer.php"); 
+require dirname(dirname(__FILE__)) .'/includes/class_template.php'; // Include the theme engine
+
+include 'sidebar.php'; // Include nav data for sidebar
+
+$engine = new template;
+
+$page = $engine -> buff_template('template');
+
+$content = "Hello World<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
+
+$title = "USS Navras Membership Database";
+
+$array = array('title' => $title,
+				'nav' => $nav,
+				'sidebar' => $sidebar,
+				'info' => $info,
+				'content' => $content);
+				
+echo $engine -> parse_variables($page, $array);
