@@ -16,4 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+?>
 
+<html>
+    <head>
+        <title>ICIS - Integrated Combat Information Systems</title>
+        <link href="/assets/css/stylesheet.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap-min.css" rel="stylesheet">
+        <link href="/assets/css/tablecloth.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="navbar">Navigation Links up here</div>
+        <div id="toolbox">Login Toolbox here</div>
+        <div id="sidebar">Sidebar</div>
+        <div id="container">
+            <div id="tabs">Tabs here</div>
+            

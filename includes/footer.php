@@ -17,3 +17,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+?>
+</div>
+<div id="footer">Copyright &copy; 2014 WebKnight Design & Development </div>
+</body>
+</html>
