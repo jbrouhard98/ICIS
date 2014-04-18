@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-//include './includes/session.inc.php'; // Include session header files
+include (dirname( __FILE__ ) . '/includes/session.inc.php'); // Include session header files
 
 require (dirname( __FILE__ ) . '/includes/config.inc.php'); // Lets include the configuration file for this.
 
