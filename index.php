@@ -51,7 +51,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['token'])){
 
     <p>
       <label for="password">Password:</label>
-      <input type="password" name="password" id="password" value="asdf">
+      <input type="password" name="password" id="password" value="password">
     </p>
 
     <p class="login-submit">
