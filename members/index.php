@@ -17,13 +17,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-include dirname(dirname(__FILE__)) . '/includes/session.inc.php'; // Include session header files
+foreach (glob(dirname(dirname(__FILE__)) . "/includes/*.php") as $filename)
+{
+    include $filename;
+}
 
-require dirname(dirname(__FILE__)) .'/includes/config.inc.php'; // Lets include the configuration file for this.
-
-require dirname(dirname(__FILE__)) .'/includes/class_template.php'; // Include the theme engine
-
-include 'sidebar.php'; // Include nav data for sidebar
 
 $engine = new template;
 
@@ -31,7 +29,7 @@ $page = $engine -> buff_template('template');
 
 $content = "Hello World<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
 
-$title = "USS Navras Membership Database";
+$title = "Profile";
 
 $array = array('title' => $title,
 				'nav' => $nav,
