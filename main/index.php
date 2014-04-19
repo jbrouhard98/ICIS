@@ -22,6 +22,8 @@ foreach (glob(dirname(dirname(__FILE__)) . "/includes/*.php") as $filename)
     include $filename;
 }
 
+include "sidebar.php";
+
 $engine = new template;
 
 $page = $engine -> buff_template('template');
@@ -30,7 +32,8 @@ $content = "<p>&nbsp;</p>
     <p><center><img src=../theme/default/images/vengeance.png /></center></p>
 	<p>Welcome to the membership database.</p>
 	<p>Please check your profile from the members area to make changes to your profile with the group.</p>
-	<p>If you have anything you need to change, or have any questions, please contact Computer Operations <compops@issproxima.org>p>
+	<p>If you have anything you need to change, or have any questions, please contact Computer Operations <compops@issproxima.org></p>
+	<p>Your session ID is ". $_SESSION['uname'] ." And your token is ". $_SESSION['token'] ."</p>
 ";
 
 $title = "Dashboard";
@@ -38,7 +41,7 @@ $title = "Dashboard";
 $array = array('title' => $title,
 				'nav' => $nav,
 				'sidebar' => $sidebar,
-				'info' => $info,
+				'user' => $user,
 				'content' => $content);
 				
 echo $engine -> parse_variables($page, $array);

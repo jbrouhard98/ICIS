@@ -21,31 +21,17 @@
 </head>
 
 <body>
-<div id=sidebar>
-<div id="accordion">
-{sidebar}
-</div>
-</div>
-<div id=container>
-<div id=header><h1>{title}</h1></div>
-<div id=content>
-	<p>{content}</p>
-</div></div><!--
-<div id=footer>
-    <div id="container>"
-	<div class=nav-bottom>
-   	 <ul class="nav-bottom">
-       	<li><a href=#>Home</a></li>
-        <li><a href=#>About Us</a></li>
-        <li><a href=#>Comms</a></li>
-        <li><a href=#>Events</a></li>
-        <li><a href=#>Links</a></li>
-      </ul>
-    </div>
-    <div id=footer-bottom><div id=container><p><center><div id=copyright>Star Trek, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager, and Star Trek: Enterprise</br>
-                        are © 1966-Present Paramount Television (a subsidiary of CBS Studios, Inc.) or Paramount Studios (a Viacom company).<br>
-                            Any use of copyrighted material is intended under the fair use doctrine, no infringement is intended.</div></center></p></div></div>
-</div>
--->
+	<div id=top>
+		<div id=logo><img src=../theme/default/images/data-center.png></div>
+		<div id=leftnav>{nav}</div>
+		<div id=rightnav>{user}&nbsp;&nbsp;<a href=../logout.php>Logout</a></div>
+	</div>
+	<div id=sidebar>
+		<div id="accordion">{sidebar}</div>
+	</div>
+	<div id=container>
+		<div id=header><h1>{title}</h1></div>
+		<div id=content><p>{content}</p></div>
+	</div>
 </body>
 </html>

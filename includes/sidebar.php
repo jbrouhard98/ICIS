@@ -1,25 +1,28 @@
 <?php
 
-// Sidebar Nav
+/* 
+ * Copyright (C) 2014 jbrouhard
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+// Top Nav
 
-$sidebar = "
-  <h3>MAIN</h3>
-  <div>
-    <a href=../main>Dashboard</a>
-  </div>
-  <h3>MEMBERS</h3>
-  <div>
-    <a href=../members>Dashboard</a>
-  </div>
-  <h3>LEADERSHIP</h3>
-  <div>
-    <a href=../leadership>Dashboard</a>
-  </div>
-  <h3>ADMIN</h3>
-  <div>
-    <a href=../admin>Dashboard</a>
-  </div>
-  <h3>Logout</h3>
-  <div><a href=../logout.php>Logout</a></div>";
+$nav = "
+  <a href=../main>Main</a> | 
+  <a href=../members>Members Area</a> | 
+  <a href=../leadership>Leadership</a> | 
+  <a href=../admin>Admin</a> | 
+  ";
   
   ?>
