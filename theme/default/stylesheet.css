@@ -42,7 +42,7 @@ body,td,th {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bolder;
 	font-size: 18px;
-	-webkit-text-fill-color: #F00;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     overflow: hidden;
@@ -57,7 +57,7 @@ body,td,th {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bolder;
 	font-size: 18px;
-	-webkit-text-fill-color: #F00;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     overflow: hidden;
@@ -74,30 +74,30 @@ body,td,th {
 }
 
 #leftnav a:link {
-	color: #FFF;
+	color: #fff;
 	text-decoration: none;
-	-webkit-text-fill-color: #F00;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 #leftnav a:visited {
 	text-decoration: none;
-	color: #FFF;
-	-webkit-text-fill-color: #F00;
+	color: #fff;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 #leftnav a:hover {
 	text-decoration: none;
-	color: #FFF;
+	color: #F00;
 	-webkit-text-fill-color: #F00;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 #leftnav a:active {
 	text-decoration: none;
-	color: #FFF;
-	-webkit-text-fill-color: #F00;
+	color: #fff;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
@@ -105,20 +105,20 @@ body,td,th {
 #rightnav a:link {
 	color: #FFF;
 	text-decoration: none;
-	-webkit-text-fill-color: #F00;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 #rightnav a:visited {
 	text-decoration: none;
 	color: #FFF;
-	-webkit-text-fill-color: #F00;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 #rightnav a:hover {
 	text-decoration: none;
-	color: #FFF;
+	color: #F00;
 	-webkit-text-fill-color: #F00;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -126,7 +126,7 @@ body,td,th {
 #rightnav a:active {
 	text-decoration: none;
 	color: #FFF;
-	-webkit-text-fill-color: #F00;
+	-webkit-text-fill-color: #fff;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
