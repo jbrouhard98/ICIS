@@ -50,12 +50,6 @@ $count = mysqli_num_rows($result);
 // If result matched username and password, table row must be *ONE* row only
 if($count==1){
 	session_start();
-	// We need to create a unique token for this session
-	$bits = '8';
-	$token = bin2hex(openssl_random_pseudo_bytes($bits));
-	// Now we need to insert this token into the table.
-	$tokenSQL = "UPDATE member SET token='$token' WHERE username='$uname'";
-	$tokenR = mysqli_query($link,$tokenSQL);
 		
 	$_SESSION['uname'] = $uname;
 	$_SESSION['token'] = $token;
