@@ -34,7 +34,7 @@ $content = '<form method="POST" action="login.php">
   </div>
 </form>';
 
-$title = "Profile";
+$title = "Login";
 
 $array = array('title' => $title,
 				'nav' => $nav,
