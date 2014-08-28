@@ -19,10 +19,8 @@
 // Top Nav
 
 $nav = "
-  <a href=../main>Main</a> | 
-  <a href=../members>Members Area</a> | 
-  <a href=../leadership>Leadership</a> | 
-  <a href=../admin>Admin</a> | 
+  <a href=../members>Member Profile</a> | 
+  <a href=../chapter>Chapter</a> | 
   ";
   
   ?>
