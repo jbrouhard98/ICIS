@@ -17,7 +17,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
  
-require (dirname( __FILE__ ) . '/includes/class_template.php'); // Include the theme engine
+ 
+ 
+include (dirname(dirname(__FILE__)) . "/includes/class_template.php");
+include (dirname(dirname(__FILE__)) . "/includes/config.inc.php");
 
 $engine = new template;
 
