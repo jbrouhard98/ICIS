@@ -24,7 +24,8 @@ ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 // include configuration file
 
-include (dirname( __FILE__ ) . '/includes/config.inc.php'); // Include configuration
+include (dirname(dirname(__FILE__)) . '/includes/config.inc.php'); // Include configuration
+include (dirname(dirname(__FILE__)) . "/includes/password.php"); // include password_hash functionality
 
 // Lets run the login paths
 
@@ -35,16 +36,16 @@ $passwd = $_POST['password'];
 
 // Protect against MySQL Injection
 $uname = stripslashes($uname);
-$passwd = stripslashes($passwd);
+//$passwd = stripslashes($passwd);
 $uname = mysqli_real_escape_string($link,$uname);
-$passwd = mysqli_real_escape_string($link,$passwd);
+//$passwd = mysqli_real_escape_string($link,$passwd);
 
 // Hash the password
 		
 $passwd_hash = password_hash($passwd, PASSWORD_BCRYPT);
 
 //Lets run the SQL
-$sql = "SELECT * FROM member WHERE username = '$uname'";
+$sql = "SELECT username,password FROM member WHERE username = '$uname'";
 $result = mysqli_query($link,$sql);
 $row = mysqli_fetch_assoc($result);
 
@@ -52,15 +53,19 @@ $passwd_db = $row['password'];
 
 
 // If result matched username and password, table row must be *ONE* row only
-if (password_verify($passwd_hash, $passwd_db)){
+if (password_verify($passwd, $passwd_db)){
 	session_start();
 		
 	$_SESSION['uname'] = $uname;
-	$_SESSION['token'] = $token;
 	
-	header("Location:/main");
+	// Log the event.
+	
+	header("Location:http://google.com");
 	}
 else{
+	
+	// Log the event.
+	
 	echo '<!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->

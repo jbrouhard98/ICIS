@@ -39,11 +39,6 @@ else
 	}
 	
 // Now lets check to see if the sesison token exists...
-if(!isset($_SESSION['token'])){
-	header('location:../index.php');
-}
-else{
-	
-}
+
 
 $user = "You are logged in as ". $_SESSION['uname'] ."";
