@@ -39,16 +39,20 @@ $passwd = stripslashes($passwd);
 $uname = mysqli_real_escape_string($link,$uname);
 $passwd = mysqli_real_escape_string($link,$passwd);
 
+// Hash the password
+		
+$passwd_hash = password_hash($passwd, PASSWORD_BCRYPT);
+
 //Lets run the SQL
-$sql = "SELECT * from member where ((username='$uname') and (password='". md5($passwd) ."'))";
+$sql = "SELECT * FROM member WHERE username = '$uname'";
 $result = mysqli_query($link,$sql);
 $row = mysqli_fetch_assoc($result);
 
-// Count the table row
-$count = mysqli_num_rows($result);
+$passwd_db = $row['password'];
+
 
 // If result matched username and password, table row must be *ONE* row only
-if($count==1){
+if (password_verify($passwd_hash, $passwd_db)){
 	session_start();
 		
 	$_SESSION['uname'] = $uname;
@@ -70,7 +74,7 @@ else{
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body><center></center><h1 class=login>Unauthorized Access<br><br>Wrong Username or Password</h1></center></body></html>';
-	header('Refresh:5; url=/index.php');
+	header('Refresh:5; url=index.php');
 }
 
 ob_end_flush();
